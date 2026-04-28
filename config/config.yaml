@@ -1,0 +1,20 @@
+# config.yaml
+# 训练超参数
+training:
+  lr: 0.0005
+  epochs: 150
+  criterion: "MSELoss"  # 损失函数类型
+  alpha_reconloss: 0.1  # 重构损失权重
+
+# 模型结构参数
+model:
+  input_dim: 35
+  latent_dim: 8
+  models:
+    dae: "DAE_SoftSensor"
+    ae: "AE_OnlyReg"
+    bp: "BP_Net"
+
+# 优化器配置
+optimizer:
+  type: "Adam"
